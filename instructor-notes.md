@@ -9,7 +9,7 @@ lets you focus on the more interesting/innovative aspects of your project.
   - It's easy to set up
   - Every copy of a Git repository is a full backup of a project and its history
   - A few easy-to-remember commands are all you need for most day-to-day version control tasks
-  - Хостинг [GitHub][github] надає вебсервіс для спільної роботи
+  - The [GitHub][github] hosting service provides a web-based collaboration service
 - Two main concepts
   - _commit_: a recorded set of changes in your project's files
   - _repository_: the history of all your project's commits
@@ -24,7 +24,8 @@ definitely the most complicated tool.  However, GitHub presently dominates the
 open software repository landscape, so the time and effort required to teach
 fundamental Git is justified and worthwhile.
 
-Через цю складність, ми не вчимо початківців багатьом цікавим темам, такі як розгалуження, хеші так об'єкти комітів.
+Because of this complexity, we don't teach novice learners about many
+interesting topics, such as branching, hashes, and commit objects.
 
 Instead we try to convince them that version control is useful for researchers
 working in teams or not, because it is
