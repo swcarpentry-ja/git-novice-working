@@ -381,7 +381,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>リポジトリの作成</h1>
-        <p>最終更新日：2024-06-06 |
+        <p>最終更新日：2024-09-30 |
 
         <a href="https://github.com/swcarpentry-ja/git-novice/edit/main/episodes/03-create.md" class="external-link">ページの編集 <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -420,8 +420,9 @@
 </div>
 <p>Gitの設定ができたら、 それを使い始めることができます。</p>
 <p>火星に惑星着陸船を送ることが可能かどうかを調査しているウルフマンとドラキュラの話に戻りましょう。</p>
-<p><img src="../fig/motivatingexample.png" alt="motivatingexample" class="figure"><a href="https://www.deviantart.com/b-maze/art/Werewolf-vs-Dracula-124893530" class="external-link">ウルフマン対ドラキュラ</a>
-by <a href="https://www.deviantart.com/b-maze" class="external-link">b-maze</a> / <a href="https://www.deviantart.com/" class="external-link">Deviant Art</a>. <a href="https://en.wikipedia.org/wiki/File:OSIRIS_Mars_true_color.jpg" class="external-link">火星</a>
+<p><img src="../fig/motivatingexample.png" alt="The main elements of the story: Dracula, Wolfman, the Mummy, Mars, Pluto and The Moon" class="figure"><a href="https://www.deviantart.com/b-maze/art/Werewolf-vs-Dracula-124893530" class="external-link">Werewolf
+vs dracula</a> by <a href="https://www.deviantart.com/b-maze" class="external-link">b-maze</a>
+/ <a href="https://www.deviantart.com/" class="external-link">Deviant Art</a>. <a href="https://en.wikipedia.org/wiki/File:OSIRIS_Mars_true_color.jpg" class="external-link">火星</a>
 by European Space Agency / <a href="https://creativecommons.org/licenses/by/3.0/deed.en" class="external-link">CC-BY-SA 3.0
 IGO</a>. <a href="https://commons.wikimedia.org/wiki/File:PIA19873-Pluto-NewHorizons-FlyingPastImage-20150714-transparent.png" class="external-link">冥王星</a>
 / Courtesy NASA/JPL-Caltech. <a href="https://commons.wikimedia.org/wiki/File:Mummy_icon_-_Noun_Project_4070.svg" class="external-link">ミイラ</a>
@@ -488,7 +489,11 @@ Viatour / <a href="https://lucnix.be/" class="external-link">https://lucnix.be</
 </h3>
 <pre class="output" tabindex="0"><code>Switched to a new branch 'main'</code></pre>
 </div>
-<p>プロジェクトのステータスをGitに問うことで、すべてが正しく設定されていることを確認できます:</p>
+<p>We can now start using one of the most important git commands, which
+is particularly helpful to beginners. <code>git status</code> tells us
+the status of our project, and better, a list of changes in the project
+and options on what to do with those changes. We can use it as often as
+we want, whenever we want to understand what is going on.</p>
 <div class="codewrapper sourceCode" id="cb8">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -579,7 +584,7 @@ nothing to commit (create/copy files and use "git add" to track)</code></pre>
 <code>git init</code> の間違いを修正する</h3>
 <div class="callout-content">
 <p>ウルフマンはドラキュラに、「入れ子」状態になっているリポジトリがいかに冗長で、混乱を引き起こす可能性があるかを説明しました。
-説明を聞いて、ドラキュラは「入れ子」状態のリポジトリを削除したいと思いました。
+Dracula would like to go back to a single git repository.
 <code>moons</code>サブディレクトリの最後の<code>git init</code>を、ドラキュラはどうやって、元に戻すことができるのでしょうか？</p>
 </div>
 </div>
@@ -603,14 +608,16 @@ Gitによって追跡されていないファイルは、他の「普通の」�
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a><span class="ex">$</span> rm filename</span></code></pre>
 </div>
-<p>同様に、<code>rm -r dirname</code> または <code>rm -rf dirname</code>
-を使ってディレクトリを削除することができます。
+<p>Similarly a directory can be removed using
+<code>rm -r dirname</code>.
 この方法で削除されるファイルやフォルダがGitによって追跡されているなら、次のエピソードで見られるように、それらの削除が、追跡する必要がある別の変更になります。</p>
 </div>
 <div class="section level3">
 <h3 id="解答-1">解答<a class="anchor" aria-label="anchor" href="#%E8%A7%A3%E7%AD%94-1"></a></h3>
-<p>Gitはすべてのファイルを<code>.git</code>ディレクトリに保存します。
-この小さなミスから立ち直るには、ドラキュラは<code>planets</code>ディレクトリの中から次のコマンドを実行して、moonsサブディレクトリの中の<code>.git</code>フォルダを削除すれば良い：</p>
+<p>Gitはすべてのファイルを<code>.git</code>ディレクトリに保存します。 To
+recover from this little mistake, Dracula can remove the
+<code>.git</code> folder in the moons subdirectory by running the
+following command from inside the <code>planets</code> directory:</p>
 <div class="codewrapper sourceCode" id="cb14">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -618,7 +625,8 @@ Gitによって追跡されていないファイルは、他の「普通の」�
 </div>
 <p>しかし、気をつけてください！
 間違ったディレクトリでこのコマンドを実行すると、残しておきたいプロジェクトのGit履歴がすべて削除されてしまいます。
-したがって、常に <code>pwd</code>
+In general, deleting files and directories using <code>rm</code> from
+the command line cannot be reversed. したがって、常に <code>pwd</code>
 コマンドを使用してカレントディレクトリを確認してください。</p>
 </div>
 </div>
@@ -700,8 +708,8 @@ Gitによって追跡されていないファイルは、他の「普通の」�
   "url": "https://swcarpentry-ja.github.io/git-novice/instructor/03-create.html",
   "identifier": "https://swcarpentry-ja.github.io/git-novice/instructor/03-create.html",
   "dateCreated": "2014-12-04",
-  "dateModified": "2024-06-06",
-  "datePublished": "2024-09-27"
+  "dateModified": "2024-09-30",
+  "datePublished": "2024-09-30"
 }
 
   </script><script>

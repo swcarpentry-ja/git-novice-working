@@ -391,7 +391,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>GitHub におけるリモート</h1>
-        <p>最終更新日：2024-06-06 |
+        <p>最終更新日：2024-09-30 |
 
         <a href="https://github.com/swcarpentry-ja/git-novice/edit/main/episodes/07-github.md" class="external-link">ページの編集 <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -440,7 +440,7 @@
 <hr class="half-width"><p><a href="https://github.com" class="external-link">GitHub</a>
 にログインし、右上隅のアイコンをクリックして <code>planets</code>
 という名前の新しいリポジトリを作成してみましょう：</p>
-<figure><img src="fig/github-create-repo-01.png" alt="Creating a Repository on GitHub (Step 1)" class="figure mx-auto d-block"></figure><p>リポジトリに「planets」という名前を付けて、「Create
+<figure><img src="fig/github-create-repo-01.png" alt='The first step in creating a repository on GitHub: clicking the "create new" button' class="figure mx-auto d-block"></figure><p>リポジトリに「planets」という名前を付けて、「Create
 Repository」をクリックします。</p>
 <p>注:
 このリポジトリはローカルのリポジトリに接続されるため、空にしておく必要があります。
@@ -449,9 +449,9 @@ README」のチェックを外したままにし、「Add .gitignore」と「Add
 license.」の両方のオプションを「None」のままにします。
 リポジトリを空にしておく必要がある理由の完全な説明については、以下の「GitHub
 ライセンスと README ファイル」の演習を参照してください。</p>
-<figure><img src="fig/github-create-repo-02.png" alt="Creating a Repository on GitHub (Step 2)" class="figure mx-auto d-block"></figure><p>リポジトリが作成されるとすぐに、GitHub には ある URL
+<figure><img src="fig/github-create-repo-02.png" alt="The second step in creating a repository on GitHub: filling out the new repository form to provide the repository name, and specify that neither a readme nor a license should be created" class="figure mx-auto d-block"></figure><p>リポジトリが作成されるとすぐに、GitHub には ある URL
 と、ローカルのリポジトリの構成方法に関する情報が記載されたページが表示されます。</p>
-<figure><img src="fig/github-create-repo-03.png" alt="Creating a Repository on GitHub (Step 3)" class="figure mx-auto d-block"></figure><p>これにより、GitHub のサーバー上で次のことが効果的に行われます。</p>
+<figure><img src="fig/github-create-repo-03.png" alt="The summary page displayed by GitHub after a new repository has been created. It contains instructions for configuring the new GitHub repository as a git remote" class="figure mx-auto d-block"></figure><p>これにより、GitHub のサーバー上で次のことが効果的に行われます。</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -463,8 +463,8 @@ license.」の両方のオプションを「None」のままにします。
 を覚えていれば、私達は <code>mars.txt</code>
 に以前の作業を追加してコミットしました。
 ローカルリポジトリのダイアグラムは次のようになります：</p>
-<figure><img src="fig/git-staging-area.svg" alt="The Local Repository with Git Staging Area" class="figure mx-auto d-block"></figure><p>Now that we have two repositories, we need a diagram like this:</p>
-<figure><img src="fig/git-freshly-made-github-repo.svg" alt="Freshly-Made GitHub Repository" class="figure mx-auto d-block"></figure><p>Note that our local repository still contains our earlier work on
+<figure><img src="fig/git-staging-area.svg" alt='A diagram showing how "git add" registers changes in the staging area, while "git commit" moves changes from the staging area to the repository' class="figure mx-auto d-block"></figure><p>Now that we have two repositories, we need a diagram like this:</p>
+<figure><img src="fig/git-freshly-made-github-repo.svg" alt='A diagram illustrating how the GitHub "planets" repository is also a git repository like our local repository, but that it is currently empty' class="figure mx-auto d-block"></figure><p>Note that our local repository still contains our earlier work on
 <code>mars.txt</code>, but the remote repository on GitHub appears empty
 as it doesn’t contain any files yet.</p>
 </section><section><h2 class="section-heading" id="connect-local-to-remote-repository">2. Connect local to remote repository<a class="anchor" aria-label="anchor" href="#connect-local-to-remote-repository"></a></h2>
@@ -472,7 +472,7 @@ as it doesn’t contain any files yet.</p>
 repository a <a href="reference.html#remote">remote</a> for the local
 repository. The home page of the repository on GitHub includes the URL
 string we need to identify it:</p>
-<figure><img src="fig/github-find-repo-string.png" alt="Where to Find Repository URL on GitHub" class="figure mx-auto d-block"></figure><p>Click on the ‘SSH’ link to change the <a href="reference.html#protocol">protocol</a> from HTTPS to SSH.</p>
+<figure><img src="fig/github-find-repo-string.png" alt="Clicking the &quot;Copy to Clipboard&quot; button on GitHub to obtain the repository's URL" class="figure mx-auto d-block"></figure><p>Click on the ‘SSH’ link to change the <a href="reference.html#protocol">protocol</a> from HTTPS to SSH.</p>
 <div id="https-vs.-ssh" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -487,7 +487,7 @@ GitHub.</p>
 </div>
 </div>
 </div>
-<figure><img src="fig/github-change-repo-string.png" alt="Changing the Repository URL on GitHub" class="figure mx-auto d-block"></figure><p>Copy that URL from the browser, go into the local
+<figure><img src="fig/github-change-repo-string.png" alt='A screenshot showing that clicking on "SSH" will make GitHub provide the SSH URL for a repository instead of the HTTPS URL' class="figure mx-auto d-block"></figure><p>Copy that URL from the browser, go into the local
 <code>planets</code> repository, and run this command:</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -618,7 +618,10 @@ Enter passphrase (empty for no passphrase):</code></pre>
 <p>Now, it is prompting Dracula for a passphrase. Since he is using his
 lab’s laptop that other people sometimes have access to, he wants to
 create a passphrase. Be sure to use something memorable or save your
-passphrase somewhere, as there is no “reset my password” option.</p>
+passphrase somewhere, as there is no “reset my password” option. Note
+that, when typing a passphrase on a terminal, there won’t be any visual
+feedback of your typing. This is normal: your passphrase will be
+recorded even if you see nothing changing on your screen.</p>
 <div class="codewrapper">
 <h3 class="code-label">出力<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -801,7 +804,7 @@ for usernames and passwords.</p>
 </div>
 </div>
 <p>Our local and remote repositories are now in this state:</p>
-<figure><img src="fig/github-repo-after-first-push.svg" alt="GitHub Repository After First Push" class="figure mx-auto d-block"></figure><div id="the--u-flag" class="callout">
+<figure><img src="fig/github-repo-after-first-push.svg" alt='A diagram showing how "git push origin" will push changes from the local repository to the remote, making the remote repository an exact copy of the local repository.' class="figure mx-auto d-block"></figure><div id="the--u-flag" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
@@ -1106,8 +1109,8 @@ local repository.</li>
   "url": "https://swcarpentry-ja.github.io/git-novice/07-github.html",
   "identifier": "https://swcarpentry-ja.github.io/git-novice/07-github.html",
   "dateCreated": "2014-12-04",
-  "dateModified": "2024-06-06",
-  "datePublished": "2024-09-27"
+  "dateModified": "2024-09-30",
+  "datePublished": "2024-09-30"
 }
 
   </script><script>
